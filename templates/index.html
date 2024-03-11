@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Helper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .alert {
+            background-color: #fcf8e3;
+            color: #8a6d3b;
+            border-color: #faebcc;
+            text-align: center;
+        }
+        form {
+            text-align: center;
+        }
+        button {
+            margin-left: 10px;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .instructions {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .contact-info {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .faculty-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alert">
+            <h1>Get Your Marks Based On Study Time</h1>
+        </div>
+        <br>
+        <form method="POST" action="/" class="form-inline">
+            <label>How many hours did you study? &nbsp;&nbsp;</label>
+            <input class="form-control" type="text" name="number">
+            <button class="btn btn-primary btn-lg">Get Score</button>
+        </form>
+
+        {% if your_marks %}
+            <h1>Your Marks: {{your_marks}}</h1>
+        {% endif %}
+
+        <div class="instructions">
+            <h2>Instructions for Students</h2>
+            <p>1. Enter the number of hours you studied accurately.</p>
+            <p>2. Click on "Get Score" to see your predicted marks.</p>
+            <p>3. Use this tool regularly to track your progress.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Phone Number: +1234567890</p>
+            <p>Google Maps: <a href="https://maps.google.com">Find us on Google Maps</a></p>
+        </div>
+
+        <div class="faculty-section">
+            <h2>Faculty and Resources</h2>
+            <p>For better marks and exam preparation, check out our faculty and their YouTube channels:</p>
+            <p><a href="#">Faculty 1 - YouTube Channel</a></p>
+            <p><a href="#">Faculty 2 - YouTube Channel</a></p>
+            <p><a href="#">Faculty 3 - YouTube Channel</a></p>
+            <p><a href="#">Faculty 4 - YouTube Channel</a></p>
+            <p><a href="#">Faculty 5 - YouTube Channel</a></p>
+            <p><a href="#">Faculty 6 - YouTube Channel</a></p>
+        </div>
+    </div>
+</body>
+</html>
